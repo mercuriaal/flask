@@ -36,6 +36,6 @@ jobs:
         uses: akhileshns/heroku-deploy@v3.12.12
         with:
           heroku_api_key: ${{secrets.HEROKU_API_KEY}}
-          heroku_app_name: 'flask-api-mercurial'
+          heroku_app_name: 'my-first-flask-mercurial'
           heroku_email: "ilya.v.lazarev@gmail.com"
           usedocker: true
