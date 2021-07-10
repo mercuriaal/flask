@@ -13,5 +13,3 @@ def client():
 def test_post(client):
     response = client.post('/')
     assert response.status_code == 404
-
-##22
