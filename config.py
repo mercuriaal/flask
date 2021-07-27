@@ -1,4 +1,6 @@
 import os
-
-POSTGRE_URI = os.getenv('DATABASE', 'Здесь переменная окружения')
-SALT = 'gc48956347g'
+POSTGRE_URI = os.getenv('DATABASE')
+SENDER_EMAIL = ''
+SENDER_PASSWORD = ''
+EMAIL_SUBJECT = 'test_subject'
+EMAIL_MESSAGE = 'hello'
