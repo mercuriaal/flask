@@ -1,7 +1,6 @@
 from datetime import date
 import hashlib
 
-import config
 from app import db
 
 
@@ -20,11 +19,9 @@ class User(db.Model):
         return str(self)
 
     def set_password(self, raw_password: str):
-        raw_password = f'{raw_password}{config.SALT}'
         self.password = hashlib.md5(raw_password.encode()).hexdigest()
 
     def check_password(self, raw_password: str):
-        raw_password = f'{raw_password}{config.SALT}'
         return self.password == hashlib.md5(raw_password.encode()).hexdigest()
 
     def to_dict(self):
